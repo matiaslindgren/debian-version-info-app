@@ -9,7 +9,7 @@ The only dependency is Python 3.7 or later, everything is implemented using the 
 ```
 python3 main.py
 ```
-Then go to [localhost:8000].
+Then go to <localhost:8000>.
 
 Overriding defaults:
 ```
