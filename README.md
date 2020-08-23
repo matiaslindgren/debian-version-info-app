@@ -15,3 +15,19 @@ Overriding defaults:
 ```
 python3 main.py --address '0.0.0.0' --port 7001 --dpkg-status-file 'status.real'
 ```
+
+## Deploying
+
+Build `deploy.dockerfile` as a Docker image to get executable containers that bind to `0.0.0.0` at the port given by environment variable `PORT`.
+
+### Heroku
+
+First create an app on Heroku.
+
+Then [deploy as a container](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml):
+```
+heroku login
+heroku git:remote -a $APP_NAME
+heroku stack:set container
+git push heroku master
+```
