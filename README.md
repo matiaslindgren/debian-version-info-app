@@ -18,16 +18,18 @@ python3 main.py --address '0.0.0.0' --port 7001 --dpkg-status-file 'status.real'
 
 ## Deploying
 
+
+### Locally 
 Build `deploy.dockerfile` as a Docker image to get executable containers that bind to `0.0.0.0` at the port given by environment variable `PORT`.
 
-### Heroku
+### On Heroku
 
-First create an app on Heroku.
+First create an app named `debian-version-info` (or something else) on Heroku.
 
 Then [deploy as a container](https://devcenter.heroku.com/articles/build-docker-images-heroku-yml):
 ```
 heroku login
-heroku git:remote -a $APP_NAME
+heroku git:remote -a debian-version-info
 heroku stack:set container
 git push heroku master
 ```
